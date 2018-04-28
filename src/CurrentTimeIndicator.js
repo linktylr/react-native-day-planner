@@ -9,9 +9,10 @@ import {
   View,
 } from 'react-native';
 
+var createReactClass = require('create-react-class');
 import PropTypes from 'prop-types';
 
-export const CurrentTimeIndicator = React.createClass({
+export const CurrentTimeIndicator = createReactClass({
   propTypes: {
     displayTime: PropTypes.string.isRequired,
     top: PropTypes.number.isRequired,
