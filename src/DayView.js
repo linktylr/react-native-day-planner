@@ -57,8 +57,10 @@ export const DayView = createReactClass({
       );
 
       const styles = {
-        height,
-        top,
+        height: height,
+        top: top,
+        backgroundColor: "#fff",
+        borderRadius: 5,
         left: 0, // TODO: Customize for stacked events.
         right: 0 // TODO: Customize for stacked events.
       };
