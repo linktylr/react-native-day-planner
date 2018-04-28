@@ -10,11 +10,10 @@ import {
 } from 'react-native';
 
 
-const {
-  PropTypes,
-} = React;
+var createReactClass = require('create-react-class');
+import PropTypes from 'prop-types';
 
-export const CalendarEvent = React.createClass({
+export const CalendarEvent = createReactClass({
   propTypes: {
     style: View.propTypes.style,
     title: PropTypes.string.isRequired,
