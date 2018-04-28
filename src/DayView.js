@@ -10,16 +10,15 @@ import {
   View,
 } from 'react-native';
 
-const {
-  PropTypes,
-} = React;
+var createReactClass = require('create-react-class');
+import PropTypes from 'prop-types';
 
 import { calculateHeightFromDates } from './utils';
 import { CurrentTimeIndicator } from './CurrentTimeIndicator';
 import moment from 'moment';
 
 const DEFAULT_HOUR_HEIGHT = 60;
-export const DayView = React.createClass({
+export const DayView = createReactClass({
   propTypes: {
     contentOffset: PropTypes.object,
     dayStartDate: PropTypes.instanceOf(Date).isRequired,
