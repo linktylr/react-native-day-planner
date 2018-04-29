@@ -17,12 +17,15 @@ export function roundSecondsToHours(seconds: number, roundingIntervalInMinutes: 
 export function calculateHeightFromDates(startDate: Date, endDate: Date, hourHeight: number): number {
   // Diff the event start and end.
   const start = moment(startDate);
+  console.log("Start Date: " + start.toString());
   const end = moment(endDate);
+  console.log("End Date: " + end.toString());
   const diff = end.diff(start, 'seconds');
   return calculateHeightFromTimeLength(diff, hourHeight);
 }
 
 export function calculateHeightFromTimeLength(timeLengthInSeconds, hourHeight: number): number {
+  console.log("Hours: " + roundSecondsToHours(timeLengthInSeconds).toString())
   return roundSecondsToHours(timeLengthInSeconds) * hourHeight;
 }
 
